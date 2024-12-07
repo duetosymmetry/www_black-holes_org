@@ -27,21 +27,11 @@ jobs:
       run: |
         cd _papers
         python inspSXSUpdateByDate.py
-    - name: Commit
-      run: |
-        git add _papers/*.md
-        git -c user.name='GitHub Action' -c user.email='action@github.com' commit -m "Auto paper update"
-    - name: Generate token
-      uses: tibdex/github-app-token@v2
-      id: generate-token
-      with:
-        app_id: ${{ secrets.APP_ID }}
-        private_key: ${{ secrets.APP_PRIVATE_KEY }}
     - name: Create PR
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v7
       with:
-        token: ${{ steps.generate-token.outputs.token }}
-        branch: gh-action/AutoINSPUpdate
+        branch: gh-action/autoINSPUpdate
+        add-paths: _papers/*.md
         delete-branch: true
         title: "Attempt to auto update papers from INSPIRE"
         body: "New paper updates found!"
