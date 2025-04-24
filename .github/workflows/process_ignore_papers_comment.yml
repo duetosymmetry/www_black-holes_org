@@ -10,8 +10,7 @@ jobs:
   process-PR-comment:
 
     # Only run on upstream, not on each fork
-    if: github.event.issue.pull_request != null \
-        && startsWith(github.event.comment.body, '/ignore-papers ')
+    if: github.event.issue.pull_request != null && startsWith(github.event.comment.body, '/ignore-papers ')
     runs-on: ubuntu-latest
     permissions:
       contents: write
