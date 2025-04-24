@@ -9,7 +9,7 @@ doi: "10.1103/PhysRevD.111.084059"
 date: 2024-10-07
 arxiv: "2410.05531"
 insp_recid: 2838419
-used_spec: true
+used_spec:
 used_spectre:
 abstract: |
   Simulation of quasicircular compact binaries is a major goal in
