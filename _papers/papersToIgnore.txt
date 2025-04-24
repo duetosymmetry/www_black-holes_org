@@ -37,3 +37,8 @@ LIGOScientific:2021yby
 Barausse:2022rvg
 Lara:2022gof
 Rubio:2024ryv
+LIGOScientific:2014oec
+LIGOScientific:2016kms
+LIGOScientific:2016dsl
+LIGOScientific:2016lio
+LIGOScientific:2016aoc
