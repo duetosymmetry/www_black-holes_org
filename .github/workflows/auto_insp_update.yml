@@ -13,9 +13,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    # Only run on upstream, not on each fork
-    if: github.repository_owner == 'sxs-collaboration'
-
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
