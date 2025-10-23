@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Only run on upstream, not on each fork
-    if: github.repository_owner == 'sxs-collaboration'
+    # if: github.repository_owner == 'sxs-collaboration'
 
     steps:
     - uses: actions/checkout@v4
@@ -29,7 +29,7 @@ jobs:
     - name: Run inspSXSUpdateByDate
       run: |
         cd _papers
-        python inspSXSUpdateByDate.py --summarize > ../PR-summary.txt
+        python inspSXSUpdateByDate.py --summarize --date 2025-10-21 > ../PR-summary.txt
     - name: Write PR body
       run: |
         cat << EOF > PR-body.txt
