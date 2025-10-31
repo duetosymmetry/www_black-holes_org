@@ -11,8 +11,7 @@ jobs:
 
     # Only run on upstream, not on each fork
     if: |
-      github.repository_owner == 'sxs-collaboration'
-      && github.event.issue.pull_request != null
+      github.event.issue.pull_request != null
       && startsWith(github.event.comment.body, '/used-spec')
     runs-on: ubuntu-latest
     permissions:
